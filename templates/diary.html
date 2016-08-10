@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+        <h1>我的日誌：{{month}}</h1>
+        <a href="/diary/word/{{month}}">匯出到Word</a><BR>
+        {% for diary in diaries %}
+                {{diary.time}}--{{diary.memo}}<BR>
+        {% endfor %}
+{% endblock %}
